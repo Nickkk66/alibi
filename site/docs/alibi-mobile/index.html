@@ -45,8 +45,16 @@
 <p class="docs-crumb">Alibi Mobile</p>
 
 <h1>Install Alibi Mobile</h1>
-<p class="lede">Alibi Mobile is the companion app that runs on the iPhone itself. Install it once from the Mac; after that the phone changes its own location, no cable and no Mac.</p>
+<p class="lede">Alibi Mobile is the companion app that runs on the iPhone itself. Install it once from the Mac; after that the phone changes its own location, no cable and no Mac, until the weekly re-sign.</p>
 <img class="shot" src="../../img/docs/install-mobile.webp" alt="The Install Alibi Mobile dialog: Apple ID, iPhone, Install" loading="lazy">
+<h2 id="how-standalone-works">How the standalone works</h2>
+<p>After the install, the phone changes its own location with no Mac attached. Open Alibi Mobile, pick a place, tap Change Location, and put the phone in your pocket. Three things make that possible:</p>
+<ul>
+<li><b>A loopback VPN.</b> iOS will not let an app talk to the phone’s own developer services directly, so a free App Store VPN app (StosVPN or LocalDevVPN) maps a private address back to the phone. It routes nothing anywhere else. Turn it on once; it stays on.</li>
+<li><b>The pairing the Mac pushed.</b> The install step leaves a pairing file inside the app. With it, the app opens the same developer connection the Mac uses, but to itself.</li>
+<li><b>A keep-alive.</b> iOS closes idle developer channels, so the app re-sends the location every few seconds and holds a background location session so it is not put to sleep. iOS can still end it after a long time in the background; reopen the app and it carries on.</li>
+</ul>
+<p>The one thing that expires is the signature. An app signed with a free Apple ID stops launching after 7 days, so plug the phone in once a week and Alibi re-signs it in a few seconds. Your places, routes and pairing survive the re-sign. A paid Apple developer account signs for a year.</p>
 <ol class="steps">
 <li><p>Set up the iPhone as in <a href="../setup-iphone/">Setup iPhone</a> and wait for <b>Connected</b>.</p></li>
 <li><p>Click <b>Install on iPhone</b> at the bottom of the map.</p></li>
