@@ -49,29 +49,29 @@
 <h2 id="switching-to-routes-mode">Switching to Routes Mode</h2>
 <p>Click <b>Routes</b> in the mode toggle in the panel to switch from Static mode. You cannot switch modes while a route is running or while your location is changed; press <b>Reset</b> first.</p>
 <h2 id="setting-up-a-route">Setting Up a Route</h2>
-<p>Place the start and end by clicking the map or by searching in the bar at the top. The first click is the <b>Start</b>, the second is the <b>End</b>. Any pin can be dragged afterwards.</p>
+<p>Place the start and end by clicking the map or by searching in the bar at the top. The first click is stop <b>1</b>, the second stop <b>2</b>, and the list shows each stop’s street with the town beneath it. Any pin can be dragged afterwards, and the rows in the panel drag up and down to change the order.</p>
 <img class="shot" src="../../img/docs/routes-setup.webp" alt="A route with a start, a waypoint and an end, and the leg speeds beneath each stop" loading="lazy">
 <h2 id="drawing-a-route">Drawing a Route</h2>
-<p>Press <b>Draw</b> under the stops. The rest of the app fades back and a small bar at the top says what to do: draw on the map with the mouse held down, lift to end a stroke and draw more, <kbd>⌫</kbd> undoes the last stroke, and <kbd>Esc</kbd> (or Done) finishes. With <b>Path</b> set to Streets the drawing is snapped to the roads, so what you drew is what the drive looks like in Find My. With Straight the phone flies along your line exactly. Clear removes the drawing.</p>
+<p>Press <b>Draw</b> under the stops. The rest of the app fades back and a small bar at the top says what to do: draw on the map with the mouse held down, lift to end a stroke and draw more, <kbd>⌫</kbd> undoes the last stroke, and <kbd>Esc</kbd> (or Done) finishes. With <b>Follow roads</b> on the drawing is fitted to the roads, so what you drew is what the drive looks like in Find My. With it off the phone flies along your line exactly. Clear removes the drawing.</p>
 <h2 id="choosing-a-travel-mode">Choosing a Travel Mode</h2>
 <p>Use the <b>Travel Mode</b> control in the route panel to choose how your location moves along the route:</p>
 <ul><li><b>Walk</b>, the slowest</li><li><b>Cycle</b>, medium</li><li><b>Drive</b>, a steady car</li><li><b>Auto</b>: each road at its posted speed, a little over the limit on freeways, with lane changes on fast roads. Nothing is perfectly constant unless you type a speed yourself.</li></ul>
 <p><b>Stop signs</b>, under More options, pauses a moment at intersections: Off, All, or Half (every other one). Settings › Movement › <b>Movement Realism</b> keeps the pace wandering slightly the way a real driver's does.</p>
-<p><b>Path</b> chooses between <b>Streets</b>, which follows the roads (the line on the map updates to the real route as soon as the end is placed), and <b>Straight</b>, which flies directly from stop to stop.</p>
-<p>The <b>Speed</b> row shows the exact figure, in mph or km/h depending on your region, and you can type any number. Each leg between two stops also has its own speed and an optional pause in seconds, shown under the stop, so a route can walk one part and drive another.</p>
+<p>The <b>Follow roads</b> switch keeps the route on real streets (the line on the map updates to the road route as soon as the end is placed). Turn it off to fly directly from stop to stop; Alibi warns before starting that this looks unnatural.</p>
+<p>The <b>Speed</b> row shows the exact figure, in mph or km/h depending on your region, and you can type any number. Each leg between two stops also has its own speed and an optional pause in seconds, shown under the stop, so a route can walk one part and drive another. In Auto the per-leg speed is hidden, since each road sets its own.</p>
 <h2 id="adding-waypoints">Adding Waypoints</h2>
 <p>To customise the path the route takes, add up to 10 waypoints. Click the map again after placing the end, or press <b>Add waypoint</b>, which drops a pin halfway along the last leg for you to drag into place. Waypoints are removed with the × on their row or on the pin’s tooltip.</p>
 <h2 id="previewing-the-route">Previewing the Route</h2>
 <p>Click <b>Preview Route</b> to calculate the road route (through OSRM) and draw it on the map. A pale marker runs the whole route in a few seconds so you can check it before the phone moves.</p>
 <img class="shot" src="../../img/docs/routes-preview.webp" alt="Previewing a route: the road path drawn on the map and the ghost marker running it" loading="lazy">
 <h2 id="starting-the-route">Starting the Route</h2>
-<p>Click <b>Start Route</b>. The iPhone’s location moves along the route in real time at the selected speed. The pill reads <b>Moving</b> with a timer, the route line animates, and the active leg is highlighted in the panel. <b>Jump</b> skips to the destination.</p>
+<p>Click <b>Start Route</b>. The iPhone’s location moves along the route in real time at the selected speed. The pill reads <b>Moving</b> with a timer, the route line animates, and the panel shows the current leg, the next stop, the distance and time left and a progress bar. <b>Save</b> in the panel keeps the running route in Saved Locations. <b>Jump to end</b>, at the bottom of the panel, skips to the destination after a confirmation, since a jump never looks real.</p>
 <img class="shot" src="../../img/docs/routes-moving.webp" alt="A route in progress: Moving pill, animated route line and the live marker on the road" loading="lazy">
 <h2 id="stay-at-end">Stay at End</h2>
 <p>Leave <b>Stay at end</b> on before starting to keep your location at the destination when the route finishes. Turn it off and your location resets to real GPS when the route ends. <b>Loop</b> repeats the route until you stop it; turning on one of the two turns the other off, since a looping route never reaches its end.</p>
-<h2 id="stopping">Stop and Reset</h2>
-<p>While a route is running, <b>Stop</b> ends the route right where the phone is and holds that spot. <b>Reset</b> stops the route and puts real GPS back. Picking a new place while a route runs offers <b>Jump here</b>, which stops the route and holds that spot instead.</p>
-<img class="shot" src="../../img/docs/routes-stopped.webp" alt="A route stopped mid-way, holding position" loading="lazy">
+<h2 id="stopping">Stop, Continue and Reset</h2>
+<p>While a route is running, <b>Stop</b> pauses it right where the phone is and holds that spot; the rest of the route waits, and <b>Continue</b> picks it up again from the same point. <b>Reset</b> drops the route and puts real GPS back. Picking a new place while a route runs offers <b>Jump here</b>, which stops the route and holds that spot instead.</p>
+<img class="shot" src="../../img/docs/routes-stopped.webp" alt="A route stopped mid-way, holding position, with Continue next to Reset" loading="lazy">
 <div class="callout info"><b>Short routes look slow</b>Walking is 3 mph, so a 200 m route takes over two minutes. Alibi notes this under the route so a slow start is not mistaken for a stall.</div>
 
 <div class="pager"><a class="prev" href="../static-mode/"><small>Previous</small>Static Mode</a><a class="next" href="../bookmarks/"><small>Next</small>Saved Locations</a></div>
