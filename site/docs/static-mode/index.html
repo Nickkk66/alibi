@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Static Mode | Alibi Docs</title>
+<meta name="description" content="Change your iPhone&#x27;s location to a single point with Alibi&#x27;s Static mode.">
+<meta name="theme-color" content="#F2622E">
+<link rel="icon" type="image/svg+xml" href="../../img/favicon.svg">
+<meta property="og:site_name" content="Alibi"><meta property="og:type" content="article"><meta property="og:title" content="Static Mode | Alibi Docs"><meta property="og:description" content="Change your iPhone&#x27;s location to a single point with Alibi&#x27;s Static mode."><meta property="og:image" content="../../img/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400..700;1,400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/alibi.css">
+<link rel="stylesheet" href="../../css/pages.css">
+<link rel="stylesheet" href="../../css/docs.css">
+</head>
+<body>
+<div class="v2-root page-root">
+<header class="v2-header v2-header--stuck"><div class="v2-wrap v2-header__inner">
+<a class="v2-brand" href="../../"><span class="v2-brand__icon" aria-hidden="true"><img class="on-white" src="../../img/mark.svg" alt="" width="27" height="27" style="opacity:1"></span><span>Alibi</span></a>
+<nav class="v2-nav"><a href="../../#how">How it works</a><a href="../../#trust">Why it’s safe</a><a href="../../docs/">Docs</a><a href="../../guides/">Guides</a></nav>
+<div class="v2-header__right"><a class="v2-header__billing" href="https://github.com/Nickkk66/alibi" target="_blank" rel="noopener">GitHub</a><div class="v2-header__cta" data-shown="true"><a class="v2-btn v2-btn--primary v2-btn--sm" href="https://github.com/Nickkk66/alibi/releases/latest/download/Alibi.dmg">Download for Mac</a></div></div>
+</div></header>
+<main class="page">
+<div class="docs">
+<nav class="docs-nav" aria-label="Docs">
+<h5>Introduction</h5>
+<a href="../">Introduction</a>
+<a href="../faq/">FAQ</a>
+<h5>Installation & Setup</h5>
+<a href="../install-macos/">Install Alibi on macOS</a>
+<a href="../setup-iphone/">Setup iPhone for Alibi</a>
+<a href="../update/">Update Alibi</a>
+<h5>Change Location</h5>
+<a href="../static-mode/" aria-current="page">Static Mode</a>
+<a href="../routes-mode/">Routes Mode</a>
+<a href="../bookmarks/">Saved Locations</a>
+<a href="../location-history/">Location History</a>
+<h5>Alibi Mobile</h5>
+<a href="../alibi-mobile/">Install Alibi Mobile</a>
+<h5>Uninstallation</h5>
+<a href="../uninstall-macos/">Uninstall Alibi on macOS</a>
+</nav>
+<article class="docs-body">
+<p class="docs-crumb">Change Location</p>
+
+<h1>Static Mode</h1>
+<p class="lede">Static mode holds your iPhone at one place. Pick it, press Change Location, and every app on the phone is there within a second.</p>
+<p>Once your device is set up and you see the green <b>Connected</b> row, the <b>Change Location</b> button becomes available.</p>
+<img class="shot" src="../../img/docs/static-pin.webp" alt="A place picked on the map with its card and the Change Location button" loading="lazy">
+<h2 id="picking-a-place">Picking a place</h2>
+<p>To quickly find a specific location, search for it in the bar at the top, click the result, and the map pin moves there. You can also click anywhere on the map, drag the pin to a more specific spot, or paste coordinates or a Google Maps or Apple Maps link into the search bar.</p>
+<p>Use the zoom and recenter controls on the map for finer adjustments. The place card shows the address and exact coordinates; the bookmark icon on it saves the place.</p>
+<p>The keyboard works too: <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> or the arrow keys pan the map (hold Shift for bigger steps), and a double-click on the map changes the location to that spot in one go.</p>
+<h2 id="changing-location">Changing location</h2>
+<p>Press <b>Change Location</b>. It takes 1–3 seconds. The pill at the top of the map turns green and counts how long the location has been changed, and the map glows.</p>
+<img class="shot" src="../../img/docs/static-spoofing.webp" alt="Alibi with the location changed: green Spoofing pill and the live marker" loading="lazy">
+<p>Alibi keeps proving the location is live: it re-sends the fix every few seconds and turns the pill amber (<b>Reconnecting…</b>) the moment the phone stops answering. If the connection cannot be rebuilt, Alibi says so with the time it happened, so you are never left thinking the phone is somewhere it is not.</p>
+<h2 id="gps-fluctuation">GPS fluctuation</h2>
+<p>Settings › Movement › <b>GPS Fluctuation</b> lets a held location wander within about 12 m, the way a real fix drifts, so a phone that sits still for an hour does not look frozen.</p>
+<h2 id="moving-without-resetting">Moving without resetting</h2>
+<p>Pick a new place while the location is changed and Alibi asks <b>Move here?</b>. Press <b>Move</b> and the phone goes straight there, no reset in between. Turn on Settings › Spoofing › <b>Move on click</b> to skip the question.</p>
+<img class="shot" src="../../img/docs/static-move.webp" alt="The Move here prompt on a place card while spoofing" loading="lazy">
+<h2 id="resetting-your-location">Resetting your location</h2>
+<p>Press <b>Reset</b> to put real GPS back. It is instant. If an app still shows the old place, it is caching; reopening it or restarting the phone forces it to read the real location.</p>
+<h2 id="keep-it-after-unplugging">Keep it after unplugging</h2>
+<p>Press <b>Lock</b>. Alibi keeps its connection open and shows two steps: on the iPhone, turn <b>Developer Mode</b> off (Settings › Privacy &amp; Security › Developer Mode), then wait two minutes and check Maps still shows the spoofed spot. When it does, unplug. The phone keeps the location until it restarts; to get real GPS back, restart the iPhone, or plug it back in and press Reset.</p>
+<img class="shot" src="../../img/docs/static-lock.webp" alt="The Lock in GPS Spoof steps" loading="lazy">
+<div class="callout info"><b>Without a cable at all</b><a href="../alibi-mobile/">Alibi Mobile</a> changes location from the phone itself, with no Mac after the first install.</div>
+
+<div class="pager"><a class="prev" href="../update/"><small>Previous</small>Update Alibi</a><a class="next" href="../routes-mode/"><small>Next</small>Routes Mode</a></div>
+</article>
+</div>
+</main>
+<footer class="v2-footer"><div class="v2-wrap"><hr class="v2-rule" style="margin-bottom: 40px;">
+<div class="v2-footer__cols">
+<div><span style="display:flex;align-items:center;gap:6px"><img src="../../img/mark.svg" alt="" width="27" height="27" style="display:block"><span style="font-size:19.5px;font-weight:600;letter-spacing:-.028em;color:var(--ink)">Alibi</span></span><p style="margin:18px 0 0;max-width:260px;font-size:14.5px;line-height:1.55;color:var(--muted)">An open-source way to put your iPhone somewhere else.</p></div>
+<div><h4>Product</h4><ul><li><a href="https://github.com/Nickkk66/alibi/releases/latest/download/Alibi.dmg">Download for Mac</a></li><li><a href="../../#pricing">Pricing</a></li><li><a href="../../#how">How it works</a></li><li><a href="../../status/">Status</a></li></ul></div>
+<div><h4>Docs</h4><ul><li><a href="../../docs/">Introduction</a></li><li><a href="../../docs/setup-iphone/">Setup iPhone</a></li><li><a href="../../docs/static-mode/">Static Mode</a></li><li><a href="../../docs/routes-mode/">Routes Mode</a></li></ul></div>
+<div><h4>Guides</h4><ul><li><a href="../../guides/">All guides</a></li><li><a href="../../iphone-location-spoofer/">iPhone location spoofer</a></li><li><a href="../../spoof-location-iphone-usb/">Spoof via USB</a></li></ul></div>
+<div><h4>Project</h4><ul><li><a href="https://github.com/Nickkk66/alibi">Source code</a></li><li><a href="../../careers/">Careers</a></li><li><a href="../../terms/">Terms</a></li><li><a href="../../privacy/">Privacy</a></li></ul></div>
+</div>
+<hr class="v2-rule" style="margin:40px 0 24px"><div class="v2-footer__bottom"><p style="margin:0;font-size:13.5px;color:var(--muted-2)">© 2026 Alibi contributors. MIT licensed.</p></div>
+</div></footer>
+</div>
+<script src="../../js/pages.js" defer></script>
+<script src="../../js/download.js" defer></script>
+</body>
+</html>

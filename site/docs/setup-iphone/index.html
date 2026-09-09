@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Setup iPhone for Alibi | Alibi Docs</title>
+<meta name="description" content="Plug in, tap Trust, turn on Developer Mode. Alibi checks each step and shows Connected when the phone is ready.">
+<meta name="theme-color" content="#F2622E">
+<link rel="icon" type="image/svg+xml" href="../../img/favicon.svg">
+<meta property="og:site_name" content="Alibi"><meta property="og:type" content="article"><meta property="og:title" content="Setup iPhone for Alibi | Alibi Docs"><meta property="og:description" content="Plug in, tap Trust, turn on Developer Mode. Alibi checks each step and shows Connected when the phone is ready."><meta property="og:image" content="../../img/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400..700;1,400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/alibi.css">
+<link rel="stylesheet" href="../../css/pages.css">
+<link rel="stylesheet" href="../../css/docs.css">
+</head>
+<body>
+<div class="v2-root page-root">
+<header class="v2-header v2-header--stuck"><div class="v2-wrap v2-header__inner">
+<a class="v2-brand" href="../../"><span class="v2-brand__icon" aria-hidden="true"><img class="on-white" src="../../img/mark.svg" alt="" width="27" height="27" style="opacity:1"></span><span>Alibi</span></a>
+<nav class="v2-nav"><a href="../../#how">How it works</a><a href="../../#trust">Why it’s safe</a><a href="../../docs/">Docs</a><a href="../../guides/">Guides</a></nav>
+<div class="v2-header__right"><a class="v2-header__billing" href="https://github.com/Nickkk66/alibi" target="_blank" rel="noopener">GitHub</a><div class="v2-header__cta" data-shown="true"><a class="v2-btn v2-btn--primary v2-btn--sm" href="https://github.com/Nickkk66/alibi/releases/latest/download/Alibi.dmg">Download for Mac</a></div></div>
+</div></header>
+<main class="page">
+<div class="docs">
+<nav class="docs-nav" aria-label="Docs">
+<h5>Introduction</h5>
+<a href="../">Introduction</a>
+<a href="../faq/">FAQ</a>
+<h5>Installation & Setup</h5>
+<a href="../install-macos/">Install Alibi on macOS</a>
+<a href="../setup-iphone/" aria-current="page">Setup iPhone for Alibi</a>
+<a href="../update/">Update Alibi</a>
+<h5>Change Location</h5>
+<a href="../static-mode/">Static Mode</a>
+<a href="../routes-mode/">Routes Mode</a>
+<a href="../bookmarks/">Saved Locations</a>
+<a href="../location-history/">Location History</a>
+<h5>Alibi Mobile</h5>
+<a href="../alibi-mobile/">Install Alibi Mobile</a>
+<h5>Uninstallation</h5>
+<a href="../uninstall-macos/">Uninstall Alibi on macOS</a>
+</nav>
+<article class="docs-body">
+<p class="docs-crumb">Installation & Setup</p>
+
+<h1>Setup iPhone for Alibi</h1>
+<p class="lede">To set up your iPhone to change its location from macOS, follow these steps. Alibi shows each one at the bottom of its panel as it happens.</p>
+<ol class="steps">
+<li><p><b>Plug your iPhone into your Mac</b> with a charging cable and unlock it.</p><p>If you have not plugged this iPhone into this Mac before, macOS may ask for access to your photos and videos. Click <b>Don’t Allow</b>: that is asked by the Mac, not by Alibi, and Alibi does not need it.</p></li>
+<li><p><b>Open Alibi</b> to the main screen with the map. The device row at the bottom of the panel changes from <b>No iPhone</b> to <b>Connecting</b>.</p><img class="shot narrow" src="../../img/docs/setup-connecting.webp" alt="Alibi panel showing Connecting" loading="lazy"></li>
+<li><p>When the iPhone shows <b>Trust This Computer</b>, tap <b>Trust</b> and enter your passcode. Alibi waits and checks again on its own.</p><img class="shot narrow" src="../../img/docs/setup-trust.webp" alt="Alibi asking you to tap Trust on the iPhone" loading="lazy">
+<div class="callout"><b>Don’t see the Trust prompt?</b>Unplug the iPhone and plug it back in with the screen unlocked. If it still does not appear, try another cable or USB port. If you tapped Don’t Trust earlier, reset it on the iPhone under Settings › General › Transfer or Reset iPhone › Reset › Reset Location &amp; Privacy, then plug in again.</div></li>
+<li><p><b>Turn on Developer Mode.</b> On the iPhone open Settings › Privacy &amp; Security, scroll to the bottom, open <b>Developer Mode</b> and switch it on. Tap <b>Restart</b> when iOS asks. When the phone is back, enter your passcode and confirm <b>Turn On</b>.</p><img class="shot narrow" src="../../img/docs/setup-devmode.webp" alt="Alibi asking for Developer Mode" loading="lazy"><p>After the phone boots, check Settings › Privacy &amp; Security › Developer Mode once more and make sure the switch is on. Alibi notices by itself and moves on.</p></li>
+<li><p><b>Wait for the developer image.</b> The first time, Alibi fetches Apple’s developer image (about 20 MB) and mounts it on the phone. A thin progress bar runs under the device row.</p><img class="shot narrow" src="../../img/docs/setup-mounting.webp" alt="Alibi uploading the developer image" loading="lazy"></li>
+<li><p>The device row turns green and reads <b>Connected</b>, and the pill on the map says <b>Ready</b>. Your iPhone is set up to change location.</p><img class="shot narrow" src="../../img/docs/setup-ready.webp" alt="Alibi showing Connected with the iPhone model and iOS version" loading="lazy"></li>
+</ol>
+<div class="callout info"><b>Prefer a guide inside the app?</b>The <b>Setup</b> button in the panel opens a four-step wizard that follows the phone through the same stages, with a Check again button and the Trust troubleshooting.</div>
+<img class="shot" src="../../img/docs/setup-wizard.webp" alt="The Setup wizard inside Alibi" loading="lazy">
+<div class="callout info"><b>Something else?</b>Every error Alibi shows has a next step under it. Settings › <b>Check again</b> re-runs the whole pipeline, and <b>Copy diagnostics</b> collects the details for a bug report.</div>
+
+<div class="pager"><a class="prev" href="../install-macos/"><small>Previous</small>Install Alibi on macOS</a><a class="next" href="../update/"><small>Next</small>Update Alibi</a></div>
+</article>
+</div>
+</main>
+<footer class="v2-footer"><div class="v2-wrap"><hr class="v2-rule" style="margin-bottom: 40px;">
+<div class="v2-footer__cols">
+<div><span style="display:flex;align-items:center;gap:6px"><img src="../../img/mark.svg" alt="" width="27" height="27" style="display:block"><span style="font-size:19.5px;font-weight:600;letter-spacing:-.028em;color:var(--ink)">Alibi</span></span><p style="margin:18px 0 0;max-width:260px;font-size:14.5px;line-height:1.55;color:var(--muted)">An open-source way to put your iPhone somewhere else.</p></div>
+<div><h4>Product</h4><ul><li><a href="https://github.com/Nickkk66/alibi/releases/latest/download/Alibi.dmg">Download for Mac</a></li><li><a href="../../#pricing">Pricing</a></li><li><a href="../../#how">How it works</a></li><li><a href="../../status/">Status</a></li></ul></div>
+<div><h4>Docs</h4><ul><li><a href="../../docs/">Introduction</a></li><li><a href="../../docs/setup-iphone/">Setup iPhone</a></li><li><a href="../../docs/static-mode/">Static Mode</a></li><li><a href="../../docs/routes-mode/">Routes Mode</a></li></ul></div>
+<div><h4>Guides</h4><ul><li><a href="../../guides/">All guides</a></li><li><a href="../../iphone-location-spoofer/">iPhone location spoofer</a></li><li><a href="../../spoof-location-iphone-usb/">Spoof via USB</a></li></ul></div>
+<div><h4>Project</h4><ul><li><a href="https://github.com/Nickkk66/alibi">Source code</a></li><li><a href="../../careers/">Careers</a></li><li><a href="../../terms/">Terms</a></li><li><a href="../../privacy/">Privacy</a></li></ul></div>
+</div>
+<hr class="v2-rule" style="margin:40px 0 24px"><div class="v2-footer__bottom"><p style="margin:0;font-size:13.5px;color:var(--muted-2)">© 2026 Alibi contributors. MIT licensed.</p></div>
+</div></footer>
+</div>
+<script src="../../js/pages.js" defer></script>
+<script src="../../js/download.js" defer></script>
+</body>
+</html>

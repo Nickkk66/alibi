@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ | Alibi Docs</title>
+<meta name="description" content="Answers about Alibi: safety, what apps see, unplugging, and how it compares to other iPhone location changers.">
+<meta name="theme-color" content="#F2622E">
+<link rel="icon" type="image/svg+xml" href="../../img/favicon.svg">
+<meta property="og:site_name" content="Alibi"><meta property="og:type" content="article"><meta property="og:title" content="FAQ | Alibi Docs"><meta property="og:description" content="Answers about Alibi: safety, what apps see, unplugging, and how it compares to other iPhone location changers."><meta property="og:image" content="../../img/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400..700;1,400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/alibi.css">
+<link rel="stylesheet" href="../../css/pages.css">
+<link rel="stylesheet" href="../../css/docs.css">
+</head>
+<body>
+<div class="v2-root page-root">
+<header class="v2-header v2-header--stuck"><div class="v2-wrap v2-header__inner">
+<a class="v2-brand" href="../../"><span class="v2-brand__icon" aria-hidden="true"><img class="on-white" src="../../img/mark.svg" alt="" width="27" height="27" style="opacity:1"></span><span>Alibi</span></a>
+<nav class="v2-nav"><a href="../../#how">How it works</a><a href="../../#trust">Why it’s safe</a><a href="../../docs/">Docs</a><a href="../../guides/">Guides</a></nav>
+<div class="v2-header__right"><a class="v2-header__billing" href="https://github.com/Nickkk66/alibi" target="_blank" rel="noopener">GitHub</a><div class="v2-header__cta" data-shown="true"><a class="v2-btn v2-btn--primary v2-btn--sm" href="https://github.com/Nickkk66/alibi/releases/latest/download/Alibi.dmg">Download for Mac</a></div></div>
+</div></header>
+<main class="page">
+<div class="docs">
+<nav class="docs-nav" aria-label="Docs">
+<h5>Introduction</h5>
+<a href="../">Introduction</a>
+<a href="../faq/" aria-current="page">FAQ</a>
+<h5>Installation & Setup</h5>
+<a href="../install-macos/">Install Alibi on macOS</a>
+<a href="../setup-iphone/">Setup iPhone for Alibi</a>
+<a href="../update/">Update Alibi</a>
+<h5>Change Location</h5>
+<a href="../static-mode/">Static Mode</a>
+<a href="../routes-mode/">Routes Mode</a>
+<a href="../bookmarks/">Saved Locations</a>
+<a href="../location-history/">Location History</a>
+<h5>Alibi Mobile</h5>
+<a href="../alibi-mobile/">Install Alibi Mobile</a>
+<h5>Uninstallation</h5>
+<a href="../uninstall-macos/">Uninstall Alibi on macOS</a>
+</nav>
+<article class="docs-body">
+<p class="docs-crumb">Introduction</p>
+
+<h1>FAQ</h1>
+<p class="lede">Short answers. The <a href="../../guides/">guides</a> go deeper.</p>
+<h2>Is it safe?</h2><p>Alibi uses the same location-simulation service Xcode uses when a developer tests a maps app. It runs on your Mac, it does not modify the phone, and pressing <b>Reset</b> puts real GPS back instantly.</p>
+<h2>Which apps see the new location?</h2><p>All of them. The fix is injected below the app layer, so Maps, Find My, games, dating and delivery apps all read the simulated position.</p>
+<h2>What happens when I unplug?</h2><p>If you press <b>Reset</b> first, the phone is back on real GPS. If you press <b>Lock</b>, turn Developer Mode off on the phone and then unplug, iOS keeps the last simulated location until the phone restarts. See <a href="../static-mode/#keep-it-after-unplugging">Keep it after unplugging</a>.</p>
+<h2>Can it work without a cable?</h2><p>Yes, with <a href="../alibi-mobile/">Alibi Mobile</a>: a companion app installed from the Mac once, which then changes location on the phone by itself.</p>
+<h2>Which map styles are there?</h2><p>Dark, Satellite (with place names), Matrix, and Light. The layers button on the map cycles through them, and <b>3D</b> tilts any style except Satellite.</p>
+<h2>Does Alibi phone home?</h2><p>No. The only network calls are to Apple (for the developer image), OpenStreetMap and OSRM (map tiles, search and road routing) and, if you choose Satellite, Esri imagery. There is no Alibi server.</p>
+
+<div class="pager"><a class="prev" href="../"><small>Previous</small>Introduction</a><a class="next" href="../install-macos/"><small>Next</small>Install Alibi on macOS</a></div>
+</article>
+</div>
+</main>
+<footer class="v2-footer"><div class="v2-wrap"><hr class="v2-rule" style="margin-bottom: 40px;">
+<div class="v2-footer__cols">
+<div><span style="display:flex;align-items:center;gap:6px"><img src="../../img/mark.svg" alt="" width="27" height="27" style="display:block"><span style="font-size:19.5px;font-weight:600;letter-spacing:-.028em;color:var(--ink)">Alibi</span></span><p style="margin:18px 0 0;max-width:260px;font-size:14.5px;line-height:1.55;color:var(--muted)">An open-source way to put your iPhone somewhere else.</p></div>
+<div><h4>Product</h4><ul><li><a href="https://github.com/Nickkk66/alibi/releases/latest/download/Alibi.dmg">Download for Mac</a></li><li><a href="../../#pricing">Pricing</a></li><li><a href="../../#how">How it works</a></li><li><a href="../../status/">Status</a></li></ul></div>
+<div><h4>Docs</h4><ul><li><a href="../../docs/">Introduction</a></li><li><a href="../../docs/setup-iphone/">Setup iPhone</a></li><li><a href="../../docs/static-mode/">Static Mode</a></li><li><a href="../../docs/routes-mode/">Routes Mode</a></li></ul></div>
+<div><h4>Guides</h4><ul><li><a href="../../guides/">All guides</a></li><li><a href="../../iphone-location-spoofer/">iPhone location spoofer</a></li><li><a href="../../spoof-location-iphone-usb/">Spoof via USB</a></li></ul></div>
+<div><h4>Project</h4><ul><li><a href="https://github.com/Nickkk66/alibi">Source code</a></li><li><a href="../../careers/">Careers</a></li><li><a href="../../terms/">Terms</a></li><li><a href="../../privacy/">Privacy</a></li></ul></div>
+</div>
+<hr class="v2-rule" style="margin:40px 0 24px"><div class="v2-footer__bottom"><p style="margin:0;font-size:13.5px;color:var(--muted-2)">© 2026 Alibi contributors. MIT licensed.</p></div>
+</div></footer>
+</div>
+<script src="../../js/pages.js" defer></script>
+<script src="../../js/download.js" defer></script>
+</body>
+</html>

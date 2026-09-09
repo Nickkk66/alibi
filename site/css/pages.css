@@ -1,0 +1,35 @@
+/* Secondary pages: guides, comparisons, legal. Rides on alibi.css tokens. */
+.page-root { min-height: 100vh; display: flex; flex-direction: column; }
+.page { padding-top: 62px; flex: 1; }
+.page-hero { padding: 64px 20px 28px; text-align: center; max-width: 780px; }
+.page-hero--wide { max-width: 900px; }
+.page-h1 { font-family: var(--font-lead); font-size: clamp(32px, 5vw, 52px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; color: var(--ink); margin: 0; }
+.page-h1 b { font-weight: 600; color: var(--accent-deep); }
+.page-lede { margin: 16px auto 0; max-width: 620px; font-size: 17px; line-height: 1.55; color: var(--muted); }
+.updated { margin: 14px 0 0; font-size: 13px; color: var(--muted-2); }
+.page-body { max-width: 760px; padding-bottom: 40px; font-size: 16px; line-height: 1.65; color: var(--ink-3); }
+.page-body h2 { font-family: var(--font-lead); font-size: 24px; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); margin: 40px 0 12px; }
+.page-body h3 { font-size: 18px; font-weight: 600; color: var(--ink); margin: 28px 0 8px; }
+.page-body p { margin: 0 0 14px; }
+.page-body a { color: var(--accent-deep); text-decoration: underline; text-decoration-color: rgba(201,72,27,.35); text-underline-offset: 3px; }
+.page-body ul { padding-left: 20px; margin: 0 0 16px; }
+.page-body li { margin: 6px 0; }
+.page-body .note { font-size: 14px; color: var(--muted); border-left: 3px solid var(--line); padding-left: 14px; }
+.page-body .q { font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+.page-body .a { margin-bottom: 16px; }
+.tbl { overflow-x: auto; margin: 8px 0 20px; border-radius: 14px; box-shadow: 0 0 0 1px var(--line); background: var(--card); }
+table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line-2); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted-2); background: var(--panel); }
+td:nth-child(2) { color: var(--accent-deep); font-weight: 500; }
+tr:last-child td { border-bottom: 0; }
+.page-cta { padding-bottom: 24px; }
+.ok { color: var(--green); font-weight: 600; } .bad { color: #B03A2E; font-weight: 600; }
+.st-list { display: flex; flex-direction: column; gap: 10px; margin: 8px 0 20px; }
+.st { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 18px; border-radius: 14px; background: var(--card); box-shadow: 0 0 0 1px var(--line); }
+.st b { display: block; color: var(--ink); font-weight: 600; }
+.st p { margin: 3px 0 0; font-size: 14px; color: var(--muted); }
+.badge { flex: none; display: inline-flex; align-items: center; gap: 7px; padding: 6px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; background: var(--panel); color: var(--muted); }
+.badge::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--muted-2); }
+.badge.ok { color: var(--green); background: rgba(47,163,92,.1); } .badge.ok::before { background: var(--green); box-shadow: 0 0 0 3px rgba(47,163,92,.18); }
+.badge.bad { color: #B03A2E; background: rgba(176,58,46,.1); } .badge.bad::before { background: #B03A2E; }
