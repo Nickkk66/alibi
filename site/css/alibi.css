@@ -331,11 +331,11 @@ b, strong { font-weight: bolder; }
    the element starts pushed toward the viewer, so it enters oversized and
    recedes into place rather than just fading up. At 800px of perspective a
    350px push renders it 800/(800-350) = 1.78x, which is the whole effect. */
-.v2-phones { display: flex; align-items: flex-start; justify-content: center; gap: 26px; perspective: 800px; }
+.v2-phones { display: flex; align-items: flex-start; justify-content: center; gap: 26px; }
 .v2-flyin { animation: v2FlyIn 0.95s cubic-bezier(0.22, 1, 0.36, 1) var(--flyin-delay, 0s) both; }
 @keyframes v2FlyIn {
-  from { opacity: 0; transform: translateZ(350px); }
-  to { opacity: 1; transform: translateZ(0); }
+  from { opacity: 0; transform: translateY(28px) scale(0.96); }
+  to { opacity: 1; transform: none; }
 }
 .v2-phone {
   position: relative; aspect-ratio: 9 / 19.5; border-radius: 30px; overflow: hidden;
@@ -641,9 +641,7 @@ b, strong { font-weight: bolder; }
 /* ── Closing stage ──────────────────────────────────────────────────────── */
 .v2-stage { position: relative; overflow: hidden; background: var(--stage); border-radius: 30px; }
 .v2-stage::before { content: ''; position: absolute; inset: 0; pointer-events: none;
-  background:
-    radial-gradient(ellipse 58% 88% at 50% 44%, rgba(242,98,46,0.26) 0%, transparent 64%),
-    radial-gradient(ellipse 46% 74% at 14% 62%, rgba(247,178,59,0.18) 0%, transparent 68%);
+  background: radial-gradient(ellipse 80% 100% at 50% 38%, rgba(242,98,46,0.10) 0%, transparent 72%);
 }
 .v2-stage__inner { position: relative; z-index: 1; }
 
