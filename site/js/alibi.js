@@ -119,7 +119,7 @@
     requestAnimationFrame(() => toast.dataset.show = 'true');
     clearTimeout(say.t); say.t = setTimeout(() => { toast.dataset.show = 'false'; setTimeout(() => toast.hidden = true, 300); }, 3200);
   };
-  const lines = ['It’s free. It’s open source. Nice try.', 'Your card was not charged, because we never asked for it.', 'Payment declined: there is nothing to pay for.', 'Receipt: $0.00. Keep it somewhere safe.'];
+  const lines = ['Paid plans are coming soon — Alibi is free to use right now.', 'Coming soon. For now, grab it free or use a referral for 3 weeks.'];
   let n = 0;
   $('#get-alibi')?.addEventListener('click', () => say(lines[n++ % lines.length]));
 
