@@ -72,13 +72,13 @@ FOOT = """
 </main>
 <footer class="v2-footer"><div class="v2-wrap"><hr class="v2-rule" style="margin-bottom: 40px;">
 <div class="v2-footer__cols">
-<div><span style="display:flex;align-items:center;gap:6px"><img src="{root}img/mark.svg" alt="" width="27" height="27" style="display:block"><span style="font-size:19.5px;font-weight:600;letter-spacing:-.028em;color:var(--ink)">Alibi</span></span><p style="margin:18px 0 0;max-width:260px;font-size:14.5px;line-height:1.55;color:var(--muted)">An open-source way to put your iPhone somewhere else.</p></div>
+<div><span style="display:flex;align-items:center;gap:6px"><img src="{root}img/mark.svg" alt="" width="27" height="27" style="display:block"><span style="font-size:19.5px;font-weight:600;letter-spacing:-.028em;color:var(--ink)">Alibi</span></span><p style="margin:18px 0 0;max-width:260px;font-size:14.5px;line-height:1.55;color:var(--muted)">Put your iPhone somewhere else.</p></div>
 <div><h4>Product</h4><ul><li><a href="{rel}">Download for Mac</a></li><li><a href="{root}#pricing">Pricing</a></li><li><a href="{root}#how">How it works</a></li><li><a href="{root}status/">Status</a></li></ul></div>
 <div><h4>Guides</h4><ul><li><a href="{root}guides/">All guides</a></li><li><a href="{root}iphone-location-spoofer/">iPhone location spoofer</a></li><li><a href="{root}gps-spoofer-ios/">GPS spoofer for iOS</a></li><li><a href="{root}spoof-location-iphone-usb/">Spoof via USB</a></li></ul></div>
 <div><h4>Compare</h4><ul><li><a href="{root}alibi-vs-ghostme/">Alibi vs GhostMe</a></li><li><a href="{root}alibi-vs-imyfone/">Alibi vs iMyFone AnyTo</a></li><li><a href="{root}alibi-vs-vanish/">Alibi vs Vanish</a></li></ul></div>
 <div><h4>Project</h4><ul><li><a href="{repo}">Source code</a></li><li><a href="{root}careers/">Careers</a></li><li><a href="{root}terms/">Terms</a></li><li><a href="{root}privacy/">Privacy</a></li></ul></div>
 </div>
-<hr class="v2-rule" style="margin:40px 0 24px"><div class="v2-footer__bottom"><p style="margin:0;font-size:13.5px;color:var(--muted-2)">© {year} Alibi contributors. MIT licensed.</p></div>
+<hr class="v2-rule" style="margin:40px 0 24px"><div class="v2-footer__bottom"><p style="margin:0;font-size:13.5px;color:var(--muted-2)">© {year} Alibi contributors.</p></div>
 </div></footer>
 </div>
 <script src="{root}js/pages.js" defer></script>
@@ -95,7 +95,7 @@ def page(slug, title, desc, eyebrow, h1, lede, body, updated=None, cta=True, wid
 <h1 class="page-h1">{inline(h1)}</h1>
 <p class="page-lede">{inline(lede)}</p>{extra}
 </section>'''
-    ctas = "" if not cta else f'''<section class="v2-wrap page-cta"><div class="v2-stage" style="padding:56px 24px;text-align:center"><div class="v2-stage__inner"><h2 class="v2-h1" style="font-size:clamp(28px,4.4vw,44px);color:#fff;max-width:560px;margin:0 auto">Try Alibi for iPhone location changing</h2><p style="max-width:440px;margin:16px auto 0;font-size:16px;line-height:1.5;color:rgba(255,255,255,.62)">Download Alibi, plug your iPhone in over USB, and move it from your computer. Free, open source, no account.</p><div style="margin-top:26px"><a class="v2-btn v2-btn--onDark v2-btn--sheen" href="{REL}">Download for Mac</a></div></div></div></section>'''
+    ctas = "" if not cta else f'''<section class="v2-wrap page-cta"><div class="v2-stage" style="padding:56px 24px;text-align:center"><div class="v2-stage__inner"><h2 class="v2-h1" style="font-size:clamp(28px,4.4vw,44px);color:#fff;max-width:560px;margin:0 auto">Try Alibi for iPhone location changing</h2><p style="max-width:440px;margin:16px auto 0;font-size:16px;line-height:1.5;color:rgba(255,255,255,.62)">Download Alibi, plug your iPhone in over USB, and move it from your computer. Free, no account.</p><div style="margin-top:26px"><a class="v2-btn v2-btn--onDark v2-btn--sheen" href="{REL}">Download for Mac</a></div></div></div></section>'''
     content = HEAD.format(title=esc(title), desc=esc(desc), root=root, repo=REPO, rel=REL) + hero + f'<article class="v2-wrap page-body">{md(body)}</article>' + ctas + FOOT.format(root=root, repo=REPO, rel=REL, year=YEAR)
     d = SITE / slug; d.mkdir(parents=True, exist_ok=True)
     (d / "index.html").write_text(content, encoding="utf8")
@@ -105,11 +105,11 @@ GUIDE_RELATED = """
 ## Related Alibi guides
 [iPhone Location Spoofer](../iphone-location-spoofer/) · [GPS Spoofer for iOS](../gps-spoofer-ios/) · [Spoof iPhone Location via USB](../spoof-location-iphone-usb/) · [All guides](../guides/)
 """
-INTRO = "Alibi is an open-source desktop tool for USB-connected iPhone location simulation. It does not require jailbreaking, it has no account or licence, and it is designed for people who want a desktop-controlled way to set or move a simulated iPhone GPS location."
+INTRO = "Alibi is a desktop tool for USB-connected iPhone location simulation. It does not require jailbreaking and needs no account, and it is designed for people who want a desktop-controlled way to set or move a simulated iPhone GPS location."
 
 page("guides", "Alibi Guides | iPhone GPS Spoofing Resources", "Practical guides for iPhone GPS spoofing, no-jailbreak location simulation, USB setup and what actually happens on the phone.",
      "Resources", "Alibi Guides", "Practical guides for iPhone GPS spoofing, no-jailbreak location simulation, USB setup, and what the phone is really doing.", """
-Alibi is an open-source desktop tool for USB-connected iPhone location simulation. These guides explain how it works, what setup you need, and when system-level GPS spoofing is the right choice.
+Alibi is a desktop tool for USB-connected iPhone location simulation. These guides explain how it works, what setup you need, and when system-level GPS spoofing is the right choice.
 
 ## iPhone GPS spoofing
 - [iPhone Location Spoofer](../iphone-location-spoofer/) — what a spoofer has to do to change what apps see, and why a browser trick is not that.
@@ -125,8 +125,8 @@ Alibi is an open-source desktop tool for USB-connected iPhone location simulatio
 - [Alibi vs Vanish](../alibi-vs-vanish/)
 """, cta=True)
 
-page("iphone-location-spoofer", "iPhone Location Spoofer | USB GPS Spoofing with Alibi", "Alibi lets you simulate an iPhone GPS location from your desktop over USB, without jailbreaking. Open source, no account.",
-     "iPhone GPS spoofing", "iPhone Location Spoofer", "Alibi lets you simulate an iPhone GPS location from your desktop over USB, without jailbreaking your device. Open source, no account, no licence.", f"""
+page("iphone-location-spoofer", "iPhone Location Spoofer | USB GPS Spoofing with Alibi", "Alibi lets you simulate an iPhone GPS location from your desktop over USB, without jailbreaking. No account needed.",
+     "iPhone GPS spoofing", "iPhone Location Spoofer", "Alibi lets you simulate an iPhone GPS location from your desktop over USB, without jailbreaking your device. No account needed.", f"""
 {INTRO}
 
 ## What an iPhone location spoofer should actually do
@@ -160,11 +160,11 @@ A: No. The simulated location is set at the system level, so every app on the ph
 Q: Can I clear the simulated location?
 A: Yes. Stop brings real GPS back immediately. A locked spoof clears on reboot.
 Q: Is it really free?
-A: Yes. MIT licensed, source on GitHub, no account, no licence key.
+A: Yes. Free to download, no account needed.
 {GUIDE_RELATED}
 """, updated="September 8, 2026")
 
-page("gps-spoofer-ios", "GPS Spoofer for iOS | No Jailbreak iPhone Location Tool", "A practical iOS GPS spoofer needs to work with the phone, not just a browser. Alibi uses a desktop-controlled USB workflow, open source.",
+page("gps-spoofer-ios", "GPS Spoofer for iOS | No Jailbreak iPhone Location Tool", "A practical iOS GPS spoofer needs to work with the phone, not just a browser. Alibi uses a desktop-controlled USB workflow.",
      "iOS GPS spoofing", "GPS Spoofer for iOS", "A practical iOS GPS spoofer needs to work with the phone, not just a browser. Alibi uses a desktop-controlled USB workflow for supported iPhones.", f"""
 {INTRO}
 
@@ -239,15 +239,14 @@ def compare(slug, other, title, desc, h1, lede, table, body):
 {body}
 
 ## Which should you pick?
-Choose Alibi if you want to read the code that touches your phone, pay nothing, keep spoofing after you unplug, and have the iPhone app included. Choose {other} if one of the things it does and Alibi does not is genuinely on your list. We would rather say that than sell you the wrong thing, and we are not selling anything anyway.
+Choose Alibi if you want to pay nothing, keep spoofing after you unplug, and have the iPhone app included. Choose {other} if one of the things it does and Alibi does not is genuinely on your list. We would rather say that than sell you the wrong thing, and we are not selling anything anyway.
 """, updated="September 8, 2026", wide=True)
 
-compare("alibi-vs-ghostme", "GhostMe", "Alibi vs GhostMe: iPhone Location Changers Compared (2026)", "Both move your iPhone anywhere from a Mac with no jailbreak. One is open source and free; the other is desktop-only and paid.",
-        "Alibi vs GhostMe: **free and open, or paid and tethered**", "Both move your iPhone anywhere on Earth from a computer with no jailbreak. Only one of them lets you read the source, unplug and keep going, and costs nothing.",
+compare("alibi-vs-ghostme", "GhostMe", "Alibi vs GhostMe: iPhone Location Changers Compared (2026)", "Both move your iPhone anywhere from a Mac with no jailbreak. One is free; the other is desktop-only and paid.",
+        "Alibi vs GhostMe: **free, or paid and tethered**", "Both move your iPhone anywhere on Earth from a computer with no jailbreak. Only one of them lets you read the source, unplug and keep going, and costs nothing.",
         """| Feature | Alibi | GhostMe |
 |---|---|---|
 | No jailbreak required | Yes | Yes |
-| Open source | Yes, MIT | No |
 | Price | $0 | $12.95/mo or $42.95/yr |
 | Mac app | Yes | Yes |
 | Windows app | On the roadmap (same code) | Yes |
@@ -264,17 +263,16 @@ GhostMe and Alibi both run on a computer, both talk to the iPhone through the de
 GhostMe is a computer program that changes your iPhone's location, and the computer stays in the loop. Alibi treats the computer as a setup step: install once, and after that Alibi Mobile does it from the phone. If you never want the phone app, start a spoof from the desktop, lock it, unplug, and the location holds until the phone reboots.
 
 ## And the price
-GhostMe is $12.95 a month or $42.95 a year, auto-renewing. Alibi is free. Every feature, every platform, and the iPhone app, with the source on GitHub. There is a pricing section on the Alibi homepage because it is a nice pricing section; every tier on it is $0.
+GhostMe is $12.95 a month or $42.95 a year, auto-renewing. Alibi is free. Every feature, every platform, and the iPhone app. There is a pricing section on the Alibi homepage because it is a nice pricing section; every tier on it is $0.
 
 > GhostMe's prices were taken from getghostme.com in September 2026 and may have changed.
 """)
 
-compare("alibi-vs-imyfone", "iMyFone AnyTo", "Alibi vs iMyFone AnyTo: iPhone Location Changers Compared (2026)", "AnyTo splits its phone app, device allowance and price across VIP and SVIP tiers. Alibi is one free, open-source tool with the iPhone app included.",
-        "Alibi vs iMyFone AnyTo: **one free tool, or a tier ladder**", "AnyTo splits its phone app, its device allowance and its price across VIP and SVIP. Alibi is one open-source tool with the iPhone app already in it and nothing to buy.",
+compare("alibi-vs-imyfone", "iMyFone AnyTo", "Alibi vs iMyFone AnyTo: iPhone Location Changers Compared (2026)", "AnyTo splits its phone app, device allowance and price across VIP and SVIP tiers. Alibi is one free tool with the iPhone app included.",
+        "Alibi vs iMyFone AnyTo: **one free tool, or a tier ladder**", "AnyTo splits its phone app, its device allowance and its price across VIP and SVIP. Alibi is one tool with the iPhone app already in it.",
         """| Feature | Alibi | iMyFone AnyTo |
 |---|---|---|
 | No jailbreak required | Yes | Yes |
-| Open source | Yes, MIT | No |
 | Price | $0 | Monthly, quarterly, yearly, lifetime across two tiers |
 | Spoof from the phone with no computer | Alibi Mobile | SVIP tier, 1 iPhone |
 | Device seats | No limit | 5 (VIP), 10 (SVIP) |
@@ -295,12 +293,11 @@ iMyFone backs its plans with a 30-day refund policy: pay first, test, then ask f
 > Details checked on imyfone.com in September 2026. iMyFone discounts often, so figures on their page may differ.
 """)
 
-compare("alibi-vs-vanish", "Vanish", "Alibi vs Vanish: the same idea, one of them open source", "Alibi is an open-source take on Vanish. Same developer pathway, same features, no licence server.",
-        "Alibi vs Vanish: **the same idea, in the open**", "Alibi started as an open-source answer to Vanish. Same Apple developer pathway, same set of features, none of the licensing.",
+compare("alibi-vs-vanish", "Vanish", "Alibi vs Vanish: the same idea, one of them free", "Alibi is a take on Vanish. Same developer pathway, same features.",
+        "Alibi vs Vanish: **the same idea, in the open**", "Alibi started as an answer to Vanish. Same Apple developer pathway, same set of features.",
         """| Feature | Alibi | Vanish |
 |---|---|---|
 | No jailbreak required | Yes | Yes |
-| Open source | Yes, MIT | No |
 | Price | $0 | From $3.99/wk, $34.99/yr, $84.99 lifetime |
 | iPhone app without a computer | Alibi Mobile | Vanish Mobile |
 | Lock and unplug | Yes | Yes |
@@ -313,12 +310,12 @@ compare("alibi-vs-vanish", "Vanish", "Alibi vs Vanish: the same idea, one of the
 Vanish is a polished product and the reference Alibi's interface follows. If you want a company behind the app, a support queue and scheduled routes today, Vanish is a fine choice.
 
 ## What Alibi does differently
-Everything Alibi does is in a public repository. There is no licence check, no machine identifier, no analytics on the website, and nothing to renew. The app talks to Apple's servers only for the developer image and, if you install Alibi Mobile, the Apple ID sign-in that Apple requires.
+There is no analytics on the website. The app talks to Apple's servers only for the developer image and, if you install Alibi Mobile, the Apple ID sign-in that Apple requires.
 
 > Vanish's prices were taken from getvanish.app in September 2026.
 """)
 
-page("careers", "Careers at Alibi", "Alibi is an open-source project. The only role is contributor, and it is open.",
+page("careers", "Careers at Alibi", "Alibi is a community project. The only role is contributor, and it is open.",
      "Careers", "Come build what's moving people.", "Alibi moves iPhones anywhere on Earth. Behind that sits a Rust core, a Mac app, an iPhone app, and a landing page with a pricing section that charges nothing. There is no company. There are contributors.", """
 People here own work end to end, from the drawing board through to the issue it eventually generates. We take on problems instead of throwing them over a ticket, mostly because there is nobody on the other side of the ticket.
 
@@ -351,11 +348,11 @@ page("status", "Alibi Status", "Live status of Alibi's downloads, website and th
 page("terms", "Alibi Terms of Use", "The rules for using Alibi: what it is, what it is not, and what you are responsible for.",
      "Legal", "Terms of Use", "The rules for using Alibi, including device requirements, acceptable use, and the fact that there is nothing to buy.", """
 ## 1. What Alibi is
-Alibi is open-source software, released under the MIT License, that simulates the location of a connected iPhone over USB using Apple's developer location-simulation service. Alibi Mobile is a companion iPhone app, installed from the desktop app, that does the same from the phone itself. Alibi does not jailbreak or modify iOS.
-The MIT License is the licence for the software. These terms explain how the project expects it to be used; they do not add restrictions to the licence.
+Alibi is software that simulates the location of a connected iPhone over USB using Apple's developer location-simulation service. Alibi Mobile is a companion iPhone app, installed from the desktop app, that does the same from the phone itself. Alibi does not jailbreak or modify iOS.
+These terms explain how the project expects Alibi to be used.
 
 ## 2. No purchase, no account
-Alibi has no price, no licence key, no account, no trial and no subscription. The pricing section on the homepage is a design homage and every tier on it costs nothing. Nobody will ever ask you for payment details on behalf of Alibi.
+Alibi is free to install; changing your location needs an access code, and there is no account, trial or subscription. The pricing section on the homepage is a design homage. Nobody will ever ask you for payment details on behalf of Alibi.
 
 ## 3. Eligibility and device requirements
 You must be legally allowed to use location simulation in your jurisdiction and must have authority over the computer, iPhone and Apple ID involved. Alibi requires a supported iPhone on iOS 17.4 or later, a USB connection for setup, Developer Mode, and internet access the first time for the developer image. Compatibility may change as Apple changes iOS.
@@ -365,7 +362,7 @@ You are solely responsible for your use of Alibi and for complying with all laws
 Third-party apps may detect simulated location and restrict or ban accounts. Alibi's contributors are not responsible for third-party enforcement.
 
 ## 5. No warranty
-Alibi is provided "as is", without warranty of any kind, as the MIT License states. Nothing here promises that Alibi works with any specific app, service, iOS version or device.
+Alibi is provided "as is", without warranty of any kind. Nothing here promises that Alibi works with any specific app, service, iOS version or device.
 
 ## 6. Apple ID and sideloading
 Installing Alibi Mobile uses your Apple ID to obtain a free development certificate from Apple. Your credentials go from your computer to Apple. Alibi has no server and never receives them. Free Apple IDs are limited by Apple to a small number of sideloaded apps and to seven-day certificates.
@@ -380,7 +377,7 @@ Open an issue at [github.com/Nickkk66/alibi/issues](https://github.com/Nickkk66/
 page("privacy", "Alibi Privacy Policy", "What Alibi collects: nothing. What the app talks to: Apple, OpenStreetMap, GitHub.",
      "Legal", "Privacy Policy", "What Alibi collects (nothing), what it does not collect (everything else), and which third parties the app talks to and why.", """
 ## 1. Overview
-Alibi has no server, no account system, no analytics and no licence checks. There is nothing for Alibi to collect, so it collects nothing. This page exists to say that plainly and to list the third parties the software talks to on your behalf.
+Alibi has no account system and no analytics. Changing your location checks an access code with Alibi's licence server; apart from that there is nothing for Alibi to collect, so it collects nothing. This page exists to say that plainly and to list the third parties the software talks to on your behalf.
 
 ## 2. Information Alibi does not collect
 Alibi does not collect your email, your name, your device identifiers, the coordinates you simulate, the places you search for, the timing of your spoofs, crash reports, or anything else. Recents, favorites and presets are stored on your computer and never leave it.
